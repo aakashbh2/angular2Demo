@@ -1,7 +1,17 @@
-.example-card {
-  width: 400px;
+.padding-top{
+	padding-bottom: 25px;
+	margin-top: 25px;
 }
 
-.example-header-image {
-  background-size: cover;
+.md-card-image{
+    display: block;
+    margin: 0 auto;
+}
+
+.md-actions {
+    text-align: center;
+}
+
+.buy {
+    margin-right: 100px !important;
 }

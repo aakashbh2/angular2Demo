@@ -12,306 +12,179 @@ export class MobileListService{
  }
 
 const MOBILE_LIST = [
-    {
-      id: 1,
-      name: 'Angular Connect',
-      date: '9/26/2036',
-      time: '10:00 am',
-      price: 599.99,
-      imageUrl: '/app/assets/images/angularconnect-shield.png',
-      sessions: [
-        {
-          id: 1,
-          name: "Using Angular 4 Pipes",
-          presenter: "Peter Bacon Darwin",
-          duration: 1,
-          level: "Intermediate",
-          abstract: `Learn all about the new pipes in Angular 4, both 
-          how to write them, and how to get the new AI CLI to write 
-          them for you. Given by the famous PBD, president of Angular 
-          University (formerly Oxford University)`,
-          voters: ['bradgreen', 'igorminar', 'martinfowler']
-        },
-        {
-          id: 2,
-          name: "Getting the most out of your dev team",
-          presenter: "Jeff Cross",
-          duration: 1,
-          level: "Intermediate",
-          abstract: `We all know that our dev teams work hard, but with 
-          the right management they can be even more productive, without 
-          overworking them. In this session I'll show you how to get the 
-          best results from the talent you already have on staff.`,
-          voters: ['johnpapa', 'bradgreen', 'igorminar', 'martinfowler']
-        },
-        {
-          id: 3,
-          name: "Angular 4 Performance Metrics",
-          presenter: "Rob Wormald",
-          duration: 2,
-          level: "Advanced",
-          abstract: `Angular 4 Performance is hot. In this session, we'll see 
-          how Angular gets such great performance by preloading data on 
-          your users devices before they even hit your site using the 
-          new predictive algorithms and thought reading software 
-          built into Angular 4.`,
-          voters: []
-        },
-        {
-          id: 4,
-          name: "Angular 5 Look Ahead",
-          presenter: "Brad Green",
-          duration: 2,
-          level: "Advanced",
-          abstract: `Even though Angular 5 is still 6 years away, we all want 
-          to know all about it so that we can spend endless hours in meetings 
-          debating if we should use Angular 4 or not. This talk will look at 
-          Angular 6 even though no code has yet been written for it. We'll 
-          look at what it might do, and how to convince your manager to 
-          hold off on any new apps until it's released`,
-          voters: []
-        },
-        {
-          id: 5,
-          name: "Basics of Angular 4",
-          presenter: "John Papa",
-          duration: 2,
-          level: "Beginner",
-          abstract: `It's time to learn the basics of Angular 4. This talk 
-          will give you everything you need to know about Angular 4 to 
-          get started with it today and be building UI's for your self 
-          driving cars and butler-bots in no time.`,
-          voters: ['bradgreen', 'igorminar']
-        }
-      ]
-    },
-    {
-      id: 2,
-      name: 'ng-nl',
-      date: '4/15/2037',
-      time: '9:00 am',
-      price: 950.00,
-      imageUrl: '/app/assets/images/ng-nl.png',
-      location: {
-        address: 'The NG-NL Convention Center & Scuba Shop',
-        city: 'Amsterdam',
-        country: 'Netherlands'
-      },
-      sessions: [
-        {
-          id: 1,
-          name: "Testing Angular 4 Workshop",
-          presenter: "Pascal Precht & Christoph Bergdorf",
-          duration: 4,
-          level: "Beginner",
-          abstract: `In this 6 hour workshop you will learn not only how to test Angular 4, 
-          you will also learn how to make the most of your team's efforts. Other topics
-          will be convincing your manager that testing is a good idea, and using the new
-          protractor tool for end to end testing.`,
-          voters: ['bradgreen', 'igorminar']
-        },
-        {
-          id: 2,
-          name: "Angular 4 and Firebase",
-          presenter: "David East",
-          duration: 3,
-          level: "Intermediate",
-          abstract: `In this workshop, David East will show you how to use Angular with the new
-          ultra-real-time 5D Firebase back end, hosting platform, and wine recommendation engine.`,
-          voters: ['bradgreen', 'igorminar', 'johnpapa']
-        },
-        {
-          id: 3,
-          name: "Reading the Angular 4 Source",
-          presenter: "Patrick Stapleton",
-          duration: 2,
-          level: "Intermediate",
-          abstract: `Angular 4's source code may be over 25 million lines of code, but it's really 
-          a lot easier to read and understand then you may think. Patrick Stapleton will talk
-          about his secretes for keeping up with the changes, and navigating around the code.`,
-          voters: ['martinfowler']
-        },
-        {
-          id: 4,
-          name: "Hail to the Lukas",
-          presenter: "Lukas Ruebbelke",
-          duration: 1,
-          level: "Beginner",
-          abstract: `In this session, Lukas will present the 
-          secret to being awesome, and how he became the President 
-          of the United States through his amazing programming skills, 
-          showing how you too can be success with just attitude.`, 
-          voters: ['bradgreen']
-        },
-      ]
-    },
-    {
-      id: 3,
-      name: 'ng-conf 2037',
-      date: '5/4/2037',
-      time: '9:00 am',
-      price: 759.00,
-      imageUrl: '/app/assets/images/ng-conf.png',
-      location: {
-        address: 'The Palatial America Hotel',
-        city: 'Salt Lake City',
-        country: 'USA'
-      },
-      sessions: [
-        {
-          id: 1,
-          name: "How Elm Powers Angular 4",
-          presenter: "Murphy Randle",
-          duration: 2,
-          level: "Intermediate",
-          abstract: `We all know that Angular is written in Elm, but did you
-          know how the source code is really written? In this exciting look
-          into the internals of Angular 4, we'll see exactly how Elm powers
-          the framework, and what you can do to take advantage of this knowledge.`,
-          voters: ['bradgreen', 'martinfowler', 'igorminar']
-        },
-        {
-          id: 2,
-          name: "Angular and React together",
-          presenter: "Jamison Dance",
-          duration: 2,
-          level: "Intermediate",
-          abstract: `React v449.6 has just been released. Let's see how to use 
-          this new version with Angular to create even more impressive applications.`,
-          voters: ['bradgreen', 'martinfowler']
-        },
-        {
-          id: 3,
-          name: "Redux Woes",
-          presenter: "Rob Wormald",
-          duration: 1,
-          level: "Intermediate",
-          abstract: `Everyone is using Redux for everything from Angular to React to 
-          Excel macros, but you're still having trouble grasping it? We'll take a look
-          at how farmers use Redux when harvesting grain as a great introduction to 
-          this game changing technology.`,
-          voters: ['bradgreen', 'martinfowler', 'johnpapa']
-        },
-        {
-          id: 4,
-          name: "ng-wat again!!",
-          presenter: "Shai Reznik",
-          duration: 1,
-          level: "Beginner",
-          abstract: `Let's take a look at some of the stranger pieces of Angular 4,
-          including neural net nets, Android in Androids, and using pipes with actual pipes.`,
-          voters: ['bradgreen', 'martinfowler', 'igorminar', 'johnpapa']
-        },
-        {
-          id: 5,
-          name: "Dressed for Success",
-          presenter: "Ward Bell",
-          duration: 2,
-          level: "Beginner",
-          abstract: `Being a developer in 2037 is about more than just writing bug-free code. 
-          You also have to look the part. In this amazing expose, Ward will talk you through
-          how to pick out the right clothes to make your coworkers and boss not only
-          respect you, but also want to be your buddy.`,
-          voters: ['bradgreen', 'martinfowler']
-        },
-        {
-          id: 6,
-          name: "These aren't the directives you're looking for",
-          presenter: "John Papa",
-          duration: 2,
-          level: "Intermediate",
-          abstract: `Coinciding with the release of Star Wars Episode 18, this talk will show how
-          to use directives in your Angular 4 development while drawing lessons from the new movie,
-          featuring all your favorite characters like Han Solo's ghost and Darth Jar Jar.`,
-          voters: ['bradgreen', 'martinfowler']
-        },
-      ]
-    },
-    {
-      id: 4,
-      name: 'UN Angular Summit',
-      date: '6/10/2037',
-      time: '8:00 am',
-      price: 800.00,
-      imageUrl: '/app/assets/images/basic-shield.png',
-      location: {
-        address: 'The UN Angular Center',
-        city: 'New York',
-        country: 'USA'
-      },
-      sessions: [
-        {
-          id: 1,
-          name: "Diversity in Tech",
-          presenter: "Sir Dave Smith",
-          duration: 2,
-          level: "Beginner",
-          abstract: `Yes, we all work with cyborgs and androids and Martians, but 
-          we probably don't realize that sometimes our internal biases can make it difficult for
-          these well-designed coworkers to really feel at home coding alongside us. This talk will
-          look at things we can do to recognize our biases and counteract them.`,
-          voters: ['bradgreen', 'igorminar']
-        },
-        {
-          id: 2,
-          name: "World Peace and Angular",
-          presenter: "US Secretary of State Zach Galifianakis",
-          duration: 2,
-          level: "Beginner",
-          abstract: `Angular has been used in most of the major peace brokering that has
-          happened in the last decade, but there is still much we can do to remove all
-          war from the world, and Angular will be a key part of that effort.`,
-          voters: ['bradgreen', 'igorminar', 'johnpapa']
-        },
-        {
-          id: 3,
-          name: "Using Angular with Androids",
-          presenter: "Dan Wahlin",
-          duration: 3,
-          level: "Advanced",
-          abstract: `Androids may do everything for us now, allowing us to spend all day playing 
-          the latest Destiny DLC, but we can still improve the massages they give and the handmade
-          brie they make using Angular 4. This session will show you how.`,
-          voters: ['igorminar', 'johnpapa']
-        },
-      ]
-    },
-    {
-      id: 5,
-      name: 'ng-vegas',
-      date: '2/10/2037',
-      time: '9:00 am',
-      price: 400.00,
-      imageUrl: '/app/assets/images/ng-vegas.png',
-      location: {
-        address: 'The Excalibur',
-        city: 'Las Vegas',
-        country: 'USA'
-      },
-      sessions: [
-        {
-          id: 1,
-          name: "Gambling with Angular",
-          presenter: "John Papa",
-          duration: 1,
-          level: "Intermediate",
-          abstract: `No, this talk isn't about slot machines. We all know that 
-          Angular is used in most waiter-bots and coke vending machines, but
-          did you know that was also used to write the core engine in the majority
-          of voting machines? This talk will look at how all presidential elections
-          are now determined by Angular code.`,
-          voters: ['bradgreen', 'igorminar']
-        },
-        {
-          id: 2,
-          name: "Angular 4 in 60ish Minutes",
-          presenter: "Dan Wahlin",
-          duration: 2,
-          level: "Beginner",
-          abstract: `Get the skinny on Angular 4 for anyone new to this great new technology.
-          Dan Wahlin will show you how you can get started with Angular in 60ish minutes, 
-          guaranteed!`,
-          voters: ['bradgreen', 'igorminar', 'johnpapa']
-        }
-      ]
-    }]
+  {
+    "id": 1,
+    "name": "Nokia Lumia 930 (Black, 32 GB)",
+    "rating": "4.2",
+    "brand": "Nokia",
+    "price": "₹35,301",
+    "os": "Windows",
+    "camera": "20MP Rear Camera",
+    "imageUrl": "https://rukminim1.flixcart.com/image/832/832/mobile/u/9/z/nokia-lumia-930-930-original-imae3p4qayfxzqau.jpeg?q=70",
+    "desc": "Wide Viewing Angle, ClearBlack Display Technology, Brightness Control, Sculpted Glass, Sunlight Readability Enhancements, Super-sensitive Touch, High Brightness Mode, Refresh Rate 60 Hz, Lumia Color Profile, Corning Gorilla Glass 3"
+  },
+  {
+    "id": 2,
+    "name": "Nokia Lumia 900 (White, 16 GB)",
+    "rating": "2.6",
+    "brand": "Nokia",
+    "price": "₹30,248",
+    "os": "Windows",
+    "camera": "8MP Rear Camera | 1MP Front Camera",
+    "imageUrl": "https://rukminim1.flixcart.com/image/832/832/mobile/4/x/c/nokia-lumia-900-original-imadddewmfu4ujny.jpeg?q=70",
+    "desc": "MMS Enabled, Flight Mode, Dedicated Keys, Audio Recorder, Video Stabilization, Internet Radio, Device Startup Security, Calculator, Calendar, Games, Alarm, To-do List, Notes"
+  },
+  {
+    "id": 3,
+    "name": "Nokia Lumia 1520 (Yellow, 32 GB)",
+    "rating": "4.5",
+    "brand": "Nokia",
+    "price": "₹39,835",
+    "os": "Windows",
+    "camera": "20MP Rear Camera | 1.2MP Front Camera",
+    "imageUrl": "https://rukminim1.flixcart.com/image/832/832/mobile/c/u/f/nokia-lumia-1520-original-imadrbkpc87fykfg.jpeg?q=70",
+    "desc": "System Connectors: Micro - USB - B, Wi-Fi Security Modes: WPA2 (AES / TKIP), WPA, WPA-Personal, WEP, WPA2-Personal, WPA-Enterprise, WPA2-Enterprise, PEAP-MSCHAPv2, EAP-SIM, EAP-AKA, NFC Support, Wi-Fi Channel Bonding, SkyDrive Cloud Storage, Free Cloud Storage: 7 GB, Calculator, Clock, Calendar, Alarm, Reminders, To-do List, Wallet, Family Room, Kids Corner, Text-to-speech Message Reader, Audio Messaging, MMS Enabled, Number Screening for Messaging, Voice Commands, Call Waiting, Voice Dial, Lost Device Tracking, Anti-phishing, Remote Security, PIN Code Security, Data Encryption, Photo Sharing, Video Sharing, Location Sharing, Nokia Beamer, DRM Support: PlayReady, Internet Radio, Audio and Voice Recording, Video Streaming"
+  },
+  {
+    "id": 4,
+    "name": "Nokia Lumia 610 (Magenta, 8 GB)",
+    "rating": "3.9",
+    "brand": "Nokia",
+    "price": "₹12,031",
+    "os": "Windows",
+    "camera": "5MP Rear Camera",
+    "imageUrl": "https://rukminim1.flixcart.com/image/832/832/mobile/t/m/d/nokia-lumia-610-original-imadbf8r3ehrgbhg.jpeg?q=70",
+    "desc": "Calendar, To-do List, Flight Mode, Games, MMS Enabled, Audio and Video Streaming, Active Noise Cancellation, Microsoft Zune, Clock, Calculator, Dedicated Keys, Voice Input, Bluetooth Support Only for Transferring Contacts and Messages"
+  },
+  {
+    "id": 5,
+    "name": "Mi 4 (White, 16 GB)",
+    "rating": "4.0",
+    "brand": "Mi",
+    "price": "₹18,028",
+    "os": "Android",
+    "camera": "13MP Rear Camera | 8MP Front Camera",
+    "imageUrl": "https://rukminim1.flixcart.com/image/832/832/mobile/3/q/h/mi-mzb4239in-original-imae3z7uqh9gpypz.jpeg?q=70",
+    "desc": "Crafted to perfection with a stainless steel frame, the Mi 4 is great for gaming with its 3D rendering capabilities, taking pictures with its 13MP Sony high speed camera and handling complex tasks with the Qualcomm Snapdragon 801 quad core processor. With intense and vivid colors, the phone lets you view pictures and enjoy videos with a rich viewing experience."
+  },
+  {
+    "id": 6,
+    "name": "Mi 3 (Metallic Grey, 16 GB)  ",
+    "rating": "4.4",
+    "brand": "Mi",
+    "price": "₹13,999",
+    "os": "Android",
+    "camera": "13MP Rear Camera | 2MP Front Camera",
+    "imageUrl": "https://rukminim1.flixcart.com/image/832/832/mobile/k/8/j/mi-mi3-original-imady54gkp5zt5hs.jpeg?q=70",
+    "desc": "Accelerate your life with the latest smartphone - the Mi 3. This sleek, elegant smartphone comes with a Qualcomm Snapdragon 800 processor, 13 Megapixel primary camera and wireless connectivity. It also has its own User Interface and Cloud space which acts as a backup for your content."
+  },
+  {
+    "id": 7,
+    "name": "Mi 5 (Black, 32 GB)  (3 GB RAM)",
+    "rating": "4.3",
+    "brand": "Mi",
+    "price": "₹22,999",
+    "os": "Android",
+    "camera": "16MP Rear Camera | 4MP Front Camera",
+    "imageUrl": "https://rukminim1.flixcart.com/image/832/832/mobile/y/p/y/mi-mi-5-mzb4783in-original-imaejypp9hfv9yrv.jpeg?q=70",
+    "desc": "Featuring a sharp profile and a lightweight body and powered by the Snapdragon 820 processor, the MI 5 is perfect for your fast lifestyle. Now you can game even faster with the Adreno 530 graphics processor."
+  },
+  {
+    "id": 8,
+    "name": "Redmi 3S Prime (Dark Grey, 32 GB)",
+    "rating": "4.2",
+    "brand": "Mi",
+    "price": "₹8,999",
+    "os": "Android",
+    "camera": "13MP Rear Camera | 5MP Front Camera",
+    "imageUrl": "https://rukminim1.flixcart.com/image/832/832/mobile/f/r/6/mi-redmi-3s-prime-na-original-imaeh6bdfjgzxucj.jpeg?q=70",
+    "desc": "Unlock the Redmi 3S Prime with the super-fast fingerprint sensor and enjoy a world of lag-free multitasking with the quick and powerful Snapdragon processor and the versatile 3GB RAM."
+  },{
+    "id": 9,
+    "name": "Apple iPhone SE (Rose Gold, 32 GB)",
+    "rating": "4.4",
+    "brand": "Apple",
+    "price": "₹21,999",
+    "os": "IOS",
+    "camera": "12MP Rear Camera | 1.2MP Front Camera",
+    "imageUrl": "https://rukminim1.flixcart.com/image/832/832/j2c6du80/mobile/n/n/5/apple-iphone-se-mp852hn-a-original-imaetmazmydgutzf.jpeg?q=70",
+    "desc": "Mobile Network, Multiple Languages and Characters Support, Built-in Speaker, Microphones, Lightning Connector, External Buttons and Connectors: Touch ID Sensor, Volume Up / Down, Ring / Silent, On / Off or Sleep / Wake, Calendar, Notes, Reminders, Clock, Calculator, AirPlay Mirroring Photos, Audio and Video Out to Apple TV (2nd Generation), Video Mirroring and Video Out Support, Location: Mobile Data, iBeacon Micro-location, FaceTime Video Calling, Audio Calling - FaceTime Audio, Wi-Fi Calling, Multi-tasking, Quick Type Keyboard, Spotlight Search, Dictionary Support, Spell Check, Air Drop, Air Play, Air Print, Control Centre, Handoff, Homekit, iCloud Keychain, iCloud Drive, Notification Centre, Siri"
+  },
+  {
+    "id": 10,
+    "name": "Apple iPhone 7 (Black, 32 GB)",
+    "rating": "4.5",
+    "brand": "Apple",
+    "price": "₹45,999",
+    "os": "IOS",
+    "camera": "12MP Rear Camera | 7MP Front Camera",
+    "imageUrl": "https://rukminim1.flixcart.com/image/832/832/mobile/7/e/e/apple-iphone-7-na-original-imaemzee435f9gpu.jpeg?q=70",
+    "desc": "Take your iPhone experience to the next level with iPhone 7. Featuring new camera systems, a better battery-life, an efficient processor and powerful stereo speakers, this smartphone will drastically enhance your iPhone experience. With a sharp and vibrant display, and a sleek water-resistant body, this phone is as powerful as it is attractive"
+  },
+  {
+    "id": 11,
+    "name": "Apple iPhone 6 (Space Grey, 32 GB)",
+    "rating": "4.3",
+    "brand": "Apple",
+    "price": "₹25,999",
+    "os": "IOS",
+    "camera": "8MP Rear Camera | 1.2MP Front Camera",
+    "imageUrl": "https://rukminim1.flixcart.com/image/832/832/j2c6du80/mobile/f/2/j/apple-iphone-6-a1586-original-imaetnf2h6gck78p.jpeg?q=70",
+    "desc": "Multi-touch, IPS Display, Wide-angle Viewing, LED Backlit Wide Screen, 500 cd / m2 Maximum Brightness, Finger Print Resistant Oleophobic Coating on Front, Full sRGB Standard, Display Zoom, Dual-domain Pixels, Reachability"
+  },
+  {
+    "id": 12,
+    "name": "Apple iPhone 7 Plus (Rose Gold, 256 GB)",
+    "rating": "4.8",
+    "brand": "Apple",
+    "price": "₹79,000",
+    "os": "IOS",
+    "camera": "12MP + 12MP Dual Rear Camera | 7MP Front Camera",
+    "imageUrl": "https://rukminim1.flixcart.com/image/832/832/mobile/x/y/m/apple-iphone-7-plus-mn4u2hn-a-original-imaerm2nwmeedag4.jpeg?q=70",
+    "desc": "With better cameras, long-lasting battery life, powerful processor and enhanced stereo speakers, the iPhone 7 Plus takes your iPhone experience till date to the next level. Thanks to its vibrant display, sleek design and a water- and splash-resistant enclosure, this smartphone looks every bit as impressive as it is."
+  },
+  {
+    "id": 13,
+    "name": "Samsung Galaxy S8 Plus",
+    "rating": "4.6",
+    "brand": "Samsung",
+    "price": "₹74,000",
+    "os": "Android",
+    "camera": "12MP Rear Camera | 8MP Front Camera",
+    "imageUrl": "https://rukminim1.flixcart.com/image/832/832/j3dbtzk0/mobile/e/j/h/samsung-galaxy-s8-plus-na-original-imaeugjwh4wczmgy.jpeg?q=70",
+    "desc": "Meet the Samsung Galaxy S8 Plus - the phone that’ll take your smartphone experience to the next level. The end-to-end Infinity Display of the Galaxy S8 Plus flows seamlessly into the aluminum shell, offering a smooth, curved surface without sharp angles. Boasting a top-notch security system featuring an Iris scanner, face recognition, fingerprint reader and more, the Galaxy S8 Plus keeps your private data safe from prying eyes. Its powerful 8 MP front camera and 12 MP rear camera further add to this smartphone’s appeal."
+  },
+  {
+    "id": 14,
+    "name": "Samsung Galaxy On Nxt (Gold, 64 GB)  (3 GB RAM)",
+    "rating": "4.1",
+    "brand": "Samsung",
+    "price": "₹15,900",
+    "os": "Android",
+    "camera": "13MP Rear Camera | 8MP Front Camera",
+    "imageUrl": "https://rukminim1.flixcart.com/image/832/832/j1qqs280/mobile/m/7/d/samsung-galaxy-on-nxt-sm-g610fzdhins-original-imaet97hmqvfn5a6.jpeg?q=70",
+    "desc": "Flaunt your style with the Samsung Galaxy On Nxt. Featuring a drool-worthy body and impressive features, this smartphone is built to perform. Talk to your mom, chat with your friends, browse the Internet - stay connected the way that suits you best - this smartphone is powerful enough to keep up with your busy lifestyle."
+  },
+  {
+    "id": 15,
+    "name": "Samsung Galaxy J3 Pro (Gold, 16 GB)  (2 GB RAM)",
+    "rating": "4.1",
+    "brand": "Samsung",
+    "price": "₹7,990",
+    "os": "Android",
+    "camera": "8MP Rear Camera | 5MP Front Camera",
+    "imageUrl": "https://rukminim1.flixcart.com/image/832/832/j3orcsw0/mobile/r/p/v/samsung-galaxy-j3-pro-sm-j320fzdgins-original-imaeurqgnaz4puyt.jpeg?q=70",
+    "desc": "Did you know a lot of accidents happen because of talking on the phone while riding? Don’t set an example for bad riding. Get the Samsung Galaxy J3 Pro and ride without worrying as when the S bike mode is activated, the callers will be informed with pre-recorded messages that you’re riding."
+  },
+  {
+    "id": 16,
+    "name": "Samsung Galaxy S7 Edge (Silver Titanium, 32 GB)",
+    "rating": "4.4",
+    "brand": "Samsung",
+    "price": "₹50,900",
+    "os": "Android",
+    "camera": "12MP Rear Camera | 5MP Front Camera",
+    "imageUrl": "https://rukminim1.flixcart.com/image/832/832/mobile/h/c/v/samsung-galaxy-s7-edge-na-original-imaegmk53n7cnuv6.jpeg?q=70",
+    "desc": "Water and Dust Resistant (Capless Water and Dust Resistant IP68), Gear Support"
+  }
+]

@@ -9,17 +9,22 @@ import { MobileListService } from './shared/mobile.service'
 
 import { AlertModule } from 'ngx-bootstrap';
 import {MdCardModule} from '@angular/material'
+import { FormsModule }   from '@angular/forms';
+
+import {FilterPipe} from './shared/filterpipe'
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     FooterComponent,
+    FilterPipe,
   ],
   imports: [
     BrowserModule,
     AlertModule.forRoot(),
      MdCardModule,
+     FormsModule,
   ],
   providers: [MobileListService],
   bootstrap: [AppComponent]

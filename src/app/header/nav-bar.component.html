@@ -16,11 +16,18 @@
             </div>
             <div class="flipkart-navbar-search smallsearch col-sm-8 col-xs-11">
                 <div class="row">
-                    <input class="flipkart-navbar-input col-xs-11" type="" placeholder="Search for Products, Brands and more" name="">
+                    <input [(ngModel)] = "queryString" class="flipkart-navbar-input col-xs-11" type="text"
+                     placeholder="Search for Products, Brands and more"  id="search">
+                          <ul>
+                        <li *ngFor="let n of brandList | FilterPipe: queryString">
+                          {{n.brand}}
+                        </li>
+                      </ul>
                 </div>
             </div>
         </div>
     </div>
     <div>
     </div>
+
 </div>
