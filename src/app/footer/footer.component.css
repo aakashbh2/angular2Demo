@@ -1,0 +1,24 @@
+.footer {
+  position: absolute;
+  right: 0;
+  left: 0;
+  background-color: #191919;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.sub-footer{
+    background-color: #090909;
+    color: #FFFFFF;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.heading{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.logout{
+    color: #191919;
+}
