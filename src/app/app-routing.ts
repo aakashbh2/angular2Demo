@@ -8,10 +8,11 @@ import { AddNewComponent } from './addNewProduct/addNew.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'mobiles', pathMatch: 'full' },
+  {	path: 'addProduct', component: AddNewComponent},
   { path: 'mobiles/:id', component: MobileDetailComponent },
   { path: 'mobiles' ,  component: ContentComponent },
-  {	path: 'addProduct', component: AddNewComponent},
-  // {	path: '404', component: Error404Component},
-  // { path: '**', redirectTo: '/404'},
+  { path: 'user', loadChildren: 'app/user/user.module#UserModule'},
+    {	path: '404', component: Error404Component},
+  { path: '**', redirectTo: '/404'},
 
 ];
