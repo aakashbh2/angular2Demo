@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row row1">
             <ul class="largenav pull-right">
-                <li class="upper-links"><a class="links" href="#">Add your Product</a></li>
+                <li class="upper-links"><a class="links" routerLink="addProduct" routerLinkActive="active">Add your Product</a></li>
                 <li class="upper-links"><a class="links" href="#">24/7 Customer Care</a></li>
                 <li class="upper-links"><a class="links" href="#">Login</a></li>
                 <li class="upper-links"><a class="links" href="#">Signup</a></li>
@@ -16,15 +16,21 @@
             </div>
             <div class="flipkart-navbar-search smallsearch col-sm-8 col-xs-11">
                 <div class="row">
-                    <input [(ngModel)] = "queryString" class="flipkart-navbar-input col-xs-11" type="text"
+                    <input class="flipkart-navbar-input col-xs-11" type="text"
                      placeholder="Search for Products, Brands and more"  id="search">
-                          <ul>
-                        <li *ngFor="let n of brandList | FilterPipe: queryString">
-                          {{n.brand}}
-                        </li>
-                      </ul>
+ 
+                    <button class="flipkart-navbar-button col-xs-1">
+                        <svg width="30px" height="15px">
+                        Search
+                        </svg>
+                    </button>
+
                 </div>
             </div>
+                    <button class="flipkart-navbar-button cart">
+                      Cart
+                    </button>
+
         </div>
     </div>
     <div>

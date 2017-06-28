@@ -1,21 +1,4 @@
 <nav-bar></nav-bar>
 
-<div class="padding-top">
-<div class="container">
-    <md-card style="width: 350px;" *ngFor="let mobiles of mobileList">
-      <img src={{mobiles.imageUrl}} height="150" width="150" class="md-card-image">
-      <md-card-content>
-      <br/>
-        <h2 align="center">{{mobiles.name}}</h2>
-        <p align="center">{{mobiles.brand}}<br/><strong>{{mobiles.price}}</strong></p>
-      </md-card-content>
-      <br/>
-      <div class="md-actions">
-        <button class="buy">Buy Now</button>
-        <button class="cart">Add to cart</button>
-      </div>
-    </md-card>
-  </div>
-</div>
-
+<router-outlet></router-outlet>
 <footer-bottom></footer-bottom>

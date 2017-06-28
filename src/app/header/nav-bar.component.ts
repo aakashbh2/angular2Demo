@@ -1,6 +1,7 @@
 import { Component,OnInit } from '@angular/core';
 import { MobileListService} from '../shared/mobile.service';
-import {FilterPipe} from '../shared/filterpipe'
+
+import {UsersSorter} from '../shared/filterPipe'
 import { Pipe, PipeTransform } from '@angular/core';
 import { FormsModule }   from '@angular/forms';
 

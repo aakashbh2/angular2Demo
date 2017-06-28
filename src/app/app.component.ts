@@ -1,5 +1,4 @@
 import { Component,OnInit } from '@angular/core';
-import { MobileListService} from './shared/mobile.service';
 
 @Component({
   selector: 'app-root',
@@ -7,17 +6,6 @@ import { MobileListService} from './shared/mobile.service';
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent implements OnInit{
-mobileList;
+export class AppComponent {
 
-constructor(private mobileListService : MobileListService){
-}
-
- getMobileList(){
-    this.mobileList = this.mobileListService.getMobiles();
-  }
-
-  ngOnInit(): void {
-     this.getMobileList();
-  }	
 }

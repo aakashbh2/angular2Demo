@@ -1,0 +1,34 @@
+<div class="padding-top">
+<div class="container">
+    <md-card layout="row" style="width: 350px;" *ngFor="let mobiles of mobileList">
+    
+      <img src={{mobiles.imageUrl}} height="150" width="150" class="md-card-image" (click)=gotoDetail(mobiles)>
+      <md-card-content>
+      <br/>
+        <h2 align="center" (click)=gotoDetail(mobiles)>{{mobiles.name}}</h2>
+        
+       <div *ngIf = "mobiles.stock" >
+          <p align="center" (click)=gotoDetail(mobiles)>In Stock<br/><strong>{{mobiles.price}}</strong></p>
+        </div>
+        <div [hidden] = "mobiles.stock" >
+          <p align="center" (click)=gotoDetail(mobiles)>Out of stock<br/><strong>{{mobiles.price}}</strong></p>
+       </div>
+    
+    </md-card-content>
+      <br/>
+      <div class="md-actions">
+        
+         <div [ngSwitch] = "mobiles.stock">
+            <span *ngSwitchCase = "'In Stock'">
+              <button class="buy" >Buy Now</button>
+               <button class="carts" (click) = "handleThumbnailClick(mobiles.name)">Add to cart</button>
+            </span>
+            <span *ngSwitchDefault >
+               <button class="buy" disabled>Buy Now</button>
+                <button class="carts" (click) = "handleThumbnailClick(mobiles.name)">Add to cart</button>
+            </span>
+          </div>       
+      </div>
+    </md-card>
+  </div>
+</div>

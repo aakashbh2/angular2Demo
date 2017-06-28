@@ -9,7 +9,12 @@ export class MobileListService{
   getMobile(id:number){
   return MOBILE_LIST.find(mobile => mobile.id === id)
   }
+
+ setMobile(newValue){
+     console.log("called" + newValue);
+     MOBILE_LIST.push(newValue);
  }
+}
 
 const MOBILE_LIST = [
   {
@@ -19,6 +24,7 @@ const MOBILE_LIST = [
     "brand": "Nokia",
     "price": "₹35,301",
     "os": "Windows",
+    "stock":"In Stock",
     "camera": "20MP Rear Camera",
     "imageUrl": "https://rukminim1.flixcart.com/image/832/832/mobile/u/9/z/nokia-lumia-930-930-original-imae3p4qayfxzqau.jpeg?q=70",
     "desc": "Wide Viewing Angle, ClearBlack Display Technology, Brightness Control, Sculpted Glass, Sunlight Readability Enhancements, Super-sensitive Touch, High Brightness Mode, Refresh Rate 60 Hz, Lumia Color Profile, Corning Gorilla Glass 3"
@@ -41,6 +47,7 @@ const MOBILE_LIST = [
     "brand": "Nokia",
     "price": "₹39,835",
     "os": "Windows",
+    "stock":"In Stock",
     "camera": "20MP Rear Camera | 1.2MP Front Camera",
     "imageUrl": "https://rukminim1.flixcart.com/image/832/832/mobile/c/u/f/nokia-lumia-1520-original-imadrbkpc87fykfg.jpeg?q=70",
     "desc": "System Connectors: Micro - USB - B, Wi-Fi Security Modes: WPA2 (AES / TKIP), WPA, WPA-Personal, WEP, WPA2-Personal, WPA-Enterprise, WPA2-Enterprise, PEAP-MSCHAPv2, EAP-SIM, EAP-AKA, NFC Support, Wi-Fi Channel Bonding, SkyDrive Cloud Storage, Free Cloud Storage: 7 GB, Calculator, Clock, Calendar, Alarm, Reminders, To-do List, Wallet, Family Room, Kids Corner, Text-to-speech Message Reader, Audio Messaging, MMS Enabled, Number Screening for Messaging, Voice Commands, Call Waiting, Voice Dial, Lost Device Tracking, Anti-phishing, Remote Security, PIN Code Security, Data Encryption, Photo Sharing, Video Sharing, Location Sharing, Nokia Beamer, DRM Support: PlayReady, Internet Radio, Audio and Voice Recording, Video Streaming"
@@ -52,6 +59,7 @@ const MOBILE_LIST = [
     "brand": "Nokia",
     "price": "₹12,031",
     "os": "Windows",
+    "stock":"In Stock",
     "camera": "5MP Rear Camera",
     "imageUrl": "https://rukminim1.flixcart.com/image/832/832/mobile/t/m/d/nokia-lumia-610-original-imadbf8r3ehrgbhg.jpeg?q=70",
     "desc": "Calendar, To-do List, Flight Mode, Games, MMS Enabled, Audio and Video Streaming, Active Noise Cancellation, Microsoft Zune, Clock, Calculator, Dedicated Keys, Voice Input, Bluetooth Support Only for Transferring Contacts and Messages"
@@ -62,6 +70,7 @@ const MOBILE_LIST = [
     "rating": "4.0",
     "brand": "Mi",
     "price": "₹18,028",
+    "stock":"In Stock",
     "os": "Android",
     "camera": "13MP Rear Camera | 8MP Front Camera",
     "imageUrl": "https://rukminim1.flixcart.com/image/832/832/mobile/3/q/h/mi-mzb4239in-original-imae3z7uqh9gpypz.jpeg?q=70",
@@ -73,6 +82,7 @@ const MOBILE_LIST = [
     "rating": "4.4",
     "brand": "Mi",
     "price": "₹13,999",
+    "stock":"In Stock",
     "os": "Android",
     "camera": "13MP Rear Camera | 2MP Front Camera",
     "imageUrl": "https://rukminim1.flixcart.com/image/832/832/mobile/k/8/j/mi-mi3-original-imady54gkp5zt5hs.jpeg?q=70",
@@ -85,6 +95,7 @@ const MOBILE_LIST = [
     "brand": "Mi",
     "price": "₹22,999",
     "os": "Android",
+    "stock":"In Stock",
     "camera": "16MP Rear Camera | 4MP Front Camera",
     "imageUrl": "https://rukminim1.flixcart.com/image/832/832/mobile/y/p/y/mi-mi-5-mzb4783in-original-imaejypp9hfv9yrv.jpeg?q=70",
     "desc": "Featuring a sharp profile and a lightweight body and powered by the Snapdragon 820 processor, the MI 5 is perfect for your fast lifestyle. Now you can game even faster with the Adreno 530 graphics processor."
@@ -96,6 +107,7 @@ const MOBILE_LIST = [
     "brand": "Mi",
     "price": "₹8,999",
     "os": "Android",
+    "stock":"In Stock",
     "camera": "13MP Rear Camera | 5MP Front Camera",
     "imageUrl": "https://rukminim1.flixcart.com/image/832/832/mobile/f/r/6/mi-redmi-3s-prime-na-original-imaeh6bdfjgzxucj.jpeg?q=70",
     "desc": "Unlock the Redmi 3S Prime with the super-fast fingerprint sensor and enjoy a world of lag-free multitasking with the quick and powerful Snapdragon processor and the versatile 3GB RAM."
@@ -105,6 +117,7 @@ const MOBILE_LIST = [
     "rating": "4.4",
     "brand": "Apple",
     "price": "₹21,999",
+    "stock":"In Stock",
     "os": "IOS",
     "camera": "12MP Rear Camera | 1.2MP Front Camera",
     "imageUrl": "https://rukminim1.flixcart.com/image/832/832/j2c6du80/mobile/n/n/5/apple-iphone-se-mp852hn-a-original-imaetmazmydgutzf.jpeg?q=70",
@@ -115,6 +128,7 @@ const MOBILE_LIST = [
     "name": "Apple iPhone 7 (Black, 32 GB)",
     "rating": "4.5",
     "brand": "Apple",
+    "stock":"In Stock",
     "price": "₹45,999",
     "os": "IOS",
     "camera": "12MP Rear Camera | 7MP Front Camera",
@@ -127,6 +141,7 @@ const MOBILE_LIST = [
     "rating": "4.3",
     "brand": "Apple",
     "price": "₹25,999",
+    "stock":"In Stock",
     "os": "IOS",
     "camera": "8MP Rear Camera | 1.2MP Front Camera",
     "imageUrl": "https://rukminim1.flixcart.com/image/832/832/j2c6du80/mobile/f/2/j/apple-iphone-6-a1586-original-imaetnf2h6gck78p.jpeg?q=70",
@@ -139,6 +154,7 @@ const MOBILE_LIST = [
     "brand": "Apple",
     "price": "₹79,000",
     "os": "IOS",
+    "stock":"In Stock",
     "camera": "12MP + 12MP Dual Rear Camera | 7MP Front Camera",
     "imageUrl": "https://rukminim1.flixcart.com/image/832/832/mobile/x/y/m/apple-iphone-7-plus-mn4u2hn-a-original-imaerm2nwmeedag4.jpeg?q=70",
     "desc": "With better cameras, long-lasting battery life, powerful processor and enhanced stereo speakers, the iPhone 7 Plus takes your iPhone experience till date to the next level. Thanks to its vibrant display, sleek design and a water- and splash-resistant enclosure, this smartphone looks every bit as impressive as it is."
@@ -149,6 +165,7 @@ const MOBILE_LIST = [
     "rating": "4.6",
     "brand": "Samsung",
     "price": "₹74,000",
+    "stock":"In Stock",
     "os": "Android",
     "camera": "12MP Rear Camera | 8MP Front Camera",
     "imageUrl": "https://rukminim1.flixcart.com/image/832/832/j3dbtzk0/mobile/e/j/h/samsung-galaxy-s8-plus-na-original-imaeugjwh4wczmgy.jpeg?q=70",
@@ -160,6 +177,7 @@ const MOBILE_LIST = [
     "rating": "4.1",
     "brand": "Samsung",
     "price": "₹15,900",
+    "stock":"In Stock",
     "os": "Android",
     "camera": "13MP Rear Camera | 8MP Front Camera",
     "imageUrl": "https://rukminim1.flixcart.com/image/832/832/j1qqs280/mobile/m/7/d/samsung-galaxy-on-nxt-sm-g610fzdhins-original-imaet97hmqvfn5a6.jpeg?q=70",
@@ -182,6 +200,7 @@ const MOBILE_LIST = [
     "rating": "4.4",
     "brand": "Samsung",
     "price": "₹50,900",
+    "stock":"In Stock",
     "os": "Android",
     "camera": "12MP Rear Camera | 5MP Front Camera",
     "imageUrl": "https://rukminim1.flixcart.com/image/832/832/mobile/h/c/v/samsung-galaxy-s7-edge-na-original-imaegmk53n7cnuv6.jpeg?q=70",

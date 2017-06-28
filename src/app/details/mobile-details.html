@@ -1,0 +1,10 @@
+<div *ngIf="mobile">
+  <h2>{{mobile.name}} details!</h2>
+  <div>
+    <label>id: </label>{{mobile.id}}</div>
+  <div>
+    <label>name: </label>
+    <input [(ngModel)]="mobile.name" placeholder="name" />
+  </div>
+  <button (click)="goBack()">Back</button>
+</div>
