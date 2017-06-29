@@ -9,10 +9,9 @@ export class MobileListService{
   getMobile(id:number){
   return MOBILE_LIST.find(mobile => mobile.id === id)
   }
-
- setMobile(newValue){
-     console.log("called" + newValue);
-     MOBILE_LIST.push(newValue);
+  
+  setMobile(newValue){
+  MOBILE_LIST.push(newValue);
  }
 }
 

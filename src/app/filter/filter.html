@@ -1,12 +1,9 @@
-<app-root>
-<div class="component-title">
-<nav-bar></nav-bar>
+ <br><br>
+ OS:<br>
+	 <input type="checkbox" (change)="mon($event,'Windows')"> Windows<br>
+     <input type="checkbox" (change)="mon($event,'IOS')"> IOS<br>
+  	 <input type="checkbox" (change)="mon($event,'Android')"> Android<br>
 
-          This is the Content!!
-
-<filter-page></filter-page>
-
-<div class="padding-top" *ngIf =false>
 <div class="container">
 
     <md-card layout="row" style="width: 350px;" *ngFor="let mobiles of mobileList">
@@ -40,7 +37,3 @@
       </div>
     </md-card>
   </div>
-</div>
-<footer-bottom></footer-bottom>
-</div>
-</app-root>

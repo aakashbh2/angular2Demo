@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { MobileListService} from '../shared/mobile.service';
 
 @Component({
   selector: 'nav-bar',

@@ -5,46 +5,70 @@
         Add New Here!!
 <div class="container">
 <div class="row">
-<form>
+<form #detialsForm="ngForm" (ngSubmit)="onSubmit(detialsForm)">
   <fieldset class="margin-top-bottom">
     <legend >Mobile Details:</legend>
     id:<br>
-    <input type="text" name="id" value="17">
+    <input type="text" name="id" ngModel #id="ngModel">
     <br>
     Name:<br>
-    <input type="text" name="name" placeholder="Phone Name">
+    <input type="text" name="name" placeholder="Phone Name" ngModel #name="ngModel">
     <br>
     Rating:<br>
-    <input type="text" name="rating" value="4.7">
+    <input type="text" ngModel name="rating" value="4.7" #rating="ngModel">
     <br>
     Brand:<br>
-    <input type="text" name="brand" value="Apple">
+    <input type="text" ngModel name="brand" value="Apple" #brand="ngModel">
     <br>
     Price:<br>
-    <input type="text" name="price" value="₹55,301">
+    <input type="text" ngModel name="price" value="₹55,301" #price="ngModel">
     <br>
     OS:<br>
-	    <input type="radio" name="os" value="Windows"> Windows<br>
-  		<input type="radio" name="os" value="IOS" checked> IOS<br>
-  		<input type="radio" name="os" value="Android"> Android
+	    <input type="radio" ngModel name="os" value="Windows"> Windows<br>
+  		<input type="radio" ngModel name="os" value="IOS" checked> IOS<br>
+  		<input type="radio" ngModel name="os" value="Android"> Android
     <br>
     Stock:<br>
-    <input type="text" name="stock" value="In Stock">
+    <input type="text" ngModel name="stock" value="In Stock" #stock="ngModel">
     <br>
     Camera:<br>
-    <input type="text" name="camera" value="20MP Rear Camera | 20MP Front Camera">
+    <input type="text" ngModel name="camera" value="20MP Rear Camera | 20MP Front Camera" #camera="ngModel">
     <br>
     ImageUrl:<br>
-    <input type="text" name="imageUrl" value="https://rukminim1.flixcart.com/image/832/832/j1dvte80/mobile/p/a/t/apple-iphone-5s-a1530-original-imaeednahzknxvrt.jpeg?q=70">
+    <input type="text" ngModel name="imageUrl" #image="ngModel">
      <br>
     Description:<br>
-    <input type="text" name="desc" value="This is a good phone">
+    <input type="text" ngModel name="desc" value="This is a good phone" #desc="ngModel">
     <br><br>
-    <input type="submit" (click)="onSubmit()" value="Submit">
+
+<button class="btn btn-primary">Submit</button>
+    <button type="button" (click)="cancel()" class="btn btn-warning">Cancel</button>
   </fieldset>
 </form>
 </div>
 </div>
+
+
+<md-card style="width: 350px;">
+    
+      <img src="{{image.value}}" height="150" width="150" class="md-card-image">
+      <md-card-content>
+      <br/>
+        <h2 align="center">{{name.value}}</h2>
+        
+          <p align="center">{{stock.value}}<br/><strong>₹{{price.value}}</strong></p>
+        
+    </md-card-content>
+      <br/>
+      <div class="md-actions">
+        
+              <button class="buy" >Buy Now</button>
+               <button class="carts">Add to cart</button>
+           
+          </div>  
+    </md-card>
+
+
 <footer-bottom></footer-bottom>
 </div>
 </app-root>
