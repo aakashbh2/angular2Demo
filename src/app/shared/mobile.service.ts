@@ -3,16 +3,16 @@ import { Injectable } from '@angular/core'
 @Injectable()
 export class MobileListService{
 	getMobiles(){
-		return MOBILE_LIST;
-	}
+	return MOBILE_LIST;
+}
 
-  getMobile(id:number){
+getMobile(id:number){
   return MOBILE_LIST.find(mobile => mobile.id === id)
-  }
+}
   
-  setMobile(newValue){
+setMobile(newValue){
   MOBILE_LIST.push(newValue);
- }
+    }
 }
 
 const MOBILE_LIST = [

@@ -1,5 +1,5 @@
 import { LoginComponent } from './login.component'
 
-export const userRoutes = [
+export const UserRoutes = [
   {path: 'login', component: LoginComponent}
 ]

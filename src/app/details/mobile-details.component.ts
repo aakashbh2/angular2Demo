@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { MobileListService} from '../shared/mobile.service';
+import { Component, OnInit, Input } from '@angular/core';
+import { MobileListService } from '../shared/mobile.service';
 
-import {AppComponent} from '../app.component';
+import { AppComponent } from '../app.component';
 
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location }               from '@angular/common';
@@ -14,18 +14,19 @@ import { Location }               from '@angular/common';
 
 export class MobileDetailComponent implements OnInit{
 mobile;
+@Input() name: string;
 
-  constructor(
+constructor(
     private mobileList: MobileListService,
     private route: ActivatedRoute,
     private location: Location
-  ) {}
+){}
 
-  ngOnInit() {
-    this.mobile=this.mobileList.getMobile(+this.route.snapshot.params['id']);    
-  }
+ngOnInit() {
+  this.mobile=this.mobileList.getMobile(+this.route.snapshot.params['id']);    
+}
 
-  goBack(): void {
-    this.location.back();
+goBack(): void {
+  this.location.back();
   }
 }

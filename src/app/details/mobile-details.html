@@ -1,30 +1,25 @@
 <app-root>
-<div class="component-title">
-<nav-bar></nav-bar>
+	<div class="component-title">
+	<nav-bar></nav-bar>
+       These are details!!
 
-          These are details!!
-
-<div *ngIf="mobile">
-	<div class="container">
-  <h1 align="middle"><strong>{{mobile.name}}</strong> details!!</h1>
-		<br><br>
-
-	<div class="item">
-  <img src={{mobile.imageUrl}} alt="phone" width="540" height="550">
-  
-</div>
-
-<br><br>
-Brand : <strong>{{mobile.brand}}</strong><br>
-Operating System : <strong>{{mobile.os}}</strong><br>
-Camera : <strong>{{mobile.camera}}</strong><br>
-Description : <strong>{{mobile.desc}}</strong><br>
- 
-<br><br>
-  <button (click)="goBack()">Back</button>
-  <br><br>
-</div>
-</div>
-<footer-bottom></footer-bottom>
-</div>
+		<div *ngIf="mobile">
+			<div class="container">
+  				<h1 align="middle"><strong>{{mobile.name | uppercase}}</strong> details!!</h1>
+				<br><br>
+				<div class="item">
+  					<img src={{mobile.imageUrl}} alt="phone" width="540" height="550">
+				</div>
+				<br><br>
+				Brand : <strong>{{mobile.brand}}</strong><br>
+				Operating System : <strong>{{mobile.os}}</strong><br>
+				Camera : <strong>{{mobile.camera}}</strong><br>
+				Description : <strong>{{mobile.desc}}</strong><br>
+ 				<br><br>
+				<button (click)="goBack()">Back</button>
+  				<br><br>
+			</div>
+		</div>
+	  <footer-bottom></footer-bottom>
+	</div>
 <app-root>

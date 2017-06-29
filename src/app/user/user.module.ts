@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common'
 import { RouterModule } from '@angular/router'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 
-import { userRoutes } from './user.routes'
+import { UserRoutes } from './user.routes'
 import { LoginComponent } from './login.component'
 
 @NgModule({
@@ -11,13 +11,13 @@ import { LoginComponent } from './login.component'
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule.forChild(userRoutes)
+    RouterModule.forChild(UserRoutes)
   ],
   declarations: [
     LoginComponent
   ],
-  providers: [
-
-  ]
+  providers: []
 })
-export class UserModule { }
+
+export class UserModule { 
+}

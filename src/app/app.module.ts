@@ -10,16 +10,16 @@ import { ContentComponent } from './content/content.component';
 import { Error404Component } from './error/404.component';
 import { AddNewComponent } from './addNewProduct/addNew.component';
 import { FilterComponent } from './filter/filter.component';
+import { IoComponent } from './iopage.component';
 
 import { RouterModule } from '@angular/router';
 import {MdCardModule} from '@angular/material';
 
 import {ToastrService} from './shared/toastr.service';
 import { MobileListService } from './shared/mobile.service';
-
+import { AuthService } from './user/auth.service'
 
 import { routes } from './app-routing'
-
 
 @NgModule({
   declarations: [
@@ -31,6 +31,7 @@ import { routes } from './app-routing'
     Error404Component,
     AddNewComponent,
     FilterComponent,
+    IoComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,7 +39,9 @@ import { routes } from './app-routing'
      FormsModule,
      RouterModule.forRoot(routes),
   ],
-  providers: [MobileListService,ToastrService],
+  providers: [MobileListService,ToastrService,AuthService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+
+export class AppModule { 
+}
