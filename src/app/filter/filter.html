@@ -1,12 +1,19 @@
- <br><br>
- OS:<br>
+<!-- <br><br>
+OS:<br>
 	 <input type="checkbox" (change)="mon($event,'Windows')"> Windows<br>
-     <input type="checkbox" (change)="mon($event,'IOS')"> IOS<br>
-  	 <input type="checkbox" (change)="mon($event,'Android')"> Android<br>
+   <input type="checkbox" (change)="mon($event,'IOS')"> IOS<br>
+   <input type="checkbox" (change)="mon($event,'Android')"> Android<br>
 
-<div class="container">
+ -->
 
-    <md-card layout="row" style="width: 350px;" *ngFor="let mobiles of mobileList">
+ Sort By:<br>
+   <input type="radio" name="sort" (change)="rating($event,'rating')"> Rating
+   <input type="radio" name="sort" (change)="rating($event,'name')"> Name
+   <input type="radio" name="sort" (change)="rating($event,'none')"> No Filter
+
+<div class="container" *ngIf = isActive>
+
+    <md-card layout="row" style="width: 350px;" *ngFor="let mobiles of filteredMobileList">
     
       <img src={{mobiles.imageUrl}} height="150" width="150" class="md-card-image" (click)=gotoDetail(mobiles)>
       <md-card-content>
@@ -36,4 +43,5 @@
           </div>       
       </div>
     </md-card>
-  </div>
+</div>
+

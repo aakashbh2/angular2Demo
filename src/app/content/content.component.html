@@ -6,7 +6,7 @@
     <filter-page></filter-page>
 
     <div class="padding-top">
-      <div class="container">
+      <div class="container" *ngIf= !isActive>
 
         <md-card layout="row" style="width: 350px;" *ngFor="let mobiles of mobileList">
         <img src={{mobiles.imageUrl}} height="150" width="150" class="md-card-image" (click)=gotoDetail(mobiles)>
@@ -19,10 +19,14 @@
           <div [hidden] = "mobiles.stock" >
             <p align="center" (click)=gotoDetail(mobiles)>Out of stock<br/>Rating <strong>{{mobiles.rating}}*</strong></p>
           </div>
+         
+<!--
           <div>
             <io-page name="This"></io-page>
             <io-page [name]="helloName"></io-page>
           </div>
+-->
+
         </md-card-content>
       <br/>
       <div class="md-actions">  

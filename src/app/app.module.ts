@@ -13,11 +13,12 @@ import { FilterComponent } from './filter/filter.component';
 import { IoComponent } from './iopage.component';
 
 import { RouterModule } from '@angular/router';
-import {MdCardModule} from '@angular/material';
+import { MdCardModule } from '@angular/material';
 
-import {ToastrService} from './shared/toastr.service';
+import { ToastrService } from './shared/toastr.service';
 import { MobileListService } from './shared/mobile.service';
 import { AuthService } from './user/auth.service'
+import { ShowComponentService } from './shared/show.component.service'
 
 import { routes } from './app-routing'
 
@@ -39,7 +40,7 @@ import { routes } from './app-routing'
      FormsModule,
      RouterModule.forRoot(routes),
   ],
-  providers: [MobileListService,ToastrService,AuthService],
+  providers: [MobileListService,ToastrService,AuthService,ShowComponentService],
   bootstrap: [AppComponent]
 })
 
