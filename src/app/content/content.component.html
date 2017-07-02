@@ -3,11 +3,20 @@
   <nav-bar></nav-bar>
     This is the Content!!
 
-    <filter-page></filter-page>
+   <br><br>
+OS:<br>
+   <input type="checkbox" (change)="mon($event,'Windows')"> Windows<br>
+   <input type="checkbox" (change)="mon($event,'IOS')"> IOS<br>
+   <input type="checkbox" (change)="mon($event,'Android')"> Android<br>
+
+ Sort By:<br>
+   <input type="radio" name="sort" (change)="rating($event,'rating')"> Rating
+   <input type="radio" name="sort" (change)="rating($event,'name')"> Name
+   <input type="radio" name="sort" (change)="rating($event,'none')"> No Filter
+
 
     <div class="padding-top">
-      <div class="container" *ngIf= !isActive>
-
+      <div class="container">
         <md-card layout="row" style="width: 350px;" *ngFor="let mobiles of mobileList">
         <img src={{mobiles.imageUrl}} height="150" width="150" class="md-card-image" (click)=gotoDetail(mobiles)>
         <md-card-content>
