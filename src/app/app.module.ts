@@ -19,7 +19,10 @@ import { MobileListService } from './shared/mobile.service';
 import { AuthService } from './user/auth.service'
 import { ShowComponentService } from './shared/show.component.service'
 
-import { routes } from './app-routing'
+import { routes } from './app-routing';
+
+import { BootstrapModalModule } from 'ng2-bootstrap-modal';
+import { ConfirmComponent } from './content/confirm.component';
 
 @NgModule({
   declarations: [
@@ -31,14 +34,19 @@ import { routes } from './app-routing'
     Error404Component,
     AddNewComponent,
     IoComponent,
+    ConfirmComponent,
   ],
   imports: [
     BrowserModule,
      MdCardModule,
      FormsModule,
+     BootstrapModalModule,
      RouterModule.forRoot(routes),
   ],
   providers: [MobileListService,ToastrService,AuthService,ShowComponentService],
+  entryComponents: [
+    ConfirmComponent
+  ],
   bootstrap: [AppComponent]
 })
 

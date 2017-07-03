@@ -42,7 +42,13 @@
       <div class="md-actions">  
          <div [ngSwitch] = "mobiles.stock">
             <span *ngSwitchCase = "'In Stock'">
-              <button class="buy" >Buy Now</button>
+              <button class="buy" class="btn btn-default btn-block" (click)=showConfirm() >Buy Now</button>
+              
+              <div class="col-sm-4" *ngIf="confirmResult != null">
+                 <span>Result: </span>
+                 <b [ngClass]="{'text-danger': !confirmResult, 'text-success': confirmResult}">{{confirmResult ? 'Accepted': 'Declined'}}</b>
+              </div>
+
               <button class="carts" (click) = "handleThumbnailClick(mobiles.name)">Add to cart</button>
             </span>
             <span *ngSwitchDefault >

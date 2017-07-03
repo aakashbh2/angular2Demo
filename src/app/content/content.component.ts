@@ -5,6 +5,9 @@ import { AppComponent } from '../app.component';
  
 import { Router } from '@angular/router';
 import { ShowComponentService} from '../shared/show.component.service';
+import { ConfirmComponent } from './confirm.component';
+import { DialogService } from "ng2-bootstrap-modal";
+
 
 @Component({
    selector: 'content-page', 
@@ -22,8 +25,9 @@ export class ContentComponent implements OnInit{
   androidList = [];
   filteredMobileList = [];
   i:number;
+  confirmResult:boolean = null;
 
-constructor(private showComponentService : ShowComponentService,private mobileListService : MobileListService,private toastr: ToastrService,private router: Router){
+constructor(private dialogService:DialogService,private showComponentService : ShowComponentService,private mobileListService : MobileListService,private toastr: ToastrService,private router: Router){
 //   this.helloName = 'Other Mobile';
 }
 
@@ -49,6 +53,16 @@ gotoDetail(mobile) {
   this.router.navigate(['mobiles', this.selectedMobile.id]);
  }
 
+showConfirm() {
+  this.dialogService.addDialog(ConfirmComponent, {
+  title:'Confirmation',
+  message:'Bla bla confirm some action?'})
+  .subscribe((isConfirmed)=>{
+  //Get dialog result
+  this.confirmResult = isConfirmed;
+  });
+ }
+ 
   rating(event,sortValue){
     if(event.target.checked){
 
