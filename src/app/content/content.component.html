@@ -3,21 +3,22 @@
   <nav-bar></nav-bar>
     This is the Content!!
 
-   <br><br>
-OS:<br>
-   <input type="checkbox" (change)="mon($event,'Windows')"> Windows<br>
-   <input type="checkbox" (change)="mon($event,'IOS')"> IOS<br>
-   <input type="checkbox" (change)="mon($event,'Android')"> Android<br>
-
- Sort By:<br>
-   <input type="radio" name="sort" (change)="rating($event,'rating')"> Rating
-   <input type="radio" name="sort" (change)="rating($event,'name')"> Name
-   <input type="radio" name="sort" (change)="rating($event,'none')"> No Filter
-
+  <div class="filter col-lg-2">
+     <br><br><em>
+     OS:</em><br>
+     <input type="checkbox" (change)="mon($event,'Windows')"> Windows<br>
+     <input type="checkbox" (change)="mon($event,'IOS')"> IOS<br>
+     <input type="checkbox" (change)="mon($event,'Android')"> Android<br>
+    
+     <br><br><em>
+     Sort By:</em><br>
+     <input type="radio" name="sort" (change)="rating($event,'rating')"> Rating
+     <input type="radio" name="sort" (change)="rating($event,'name')"> Name
+  </div>
 
     <div class="padding-top">
       <div class="container">
-        <md-card layout="row" style="width: 350px;" *ngFor="let mobiles of mobileList">
+        <md-card class="row" style="width: 350px;" *ngFor="let mobiles of filteredMobileList">
         <img src={{mobiles.imageUrl}} height="150" width="150" class="md-card-image" (click)=gotoDetail(mobiles)>
         <md-card-content>
             <br/>

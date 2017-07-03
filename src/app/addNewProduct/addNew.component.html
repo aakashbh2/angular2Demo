@@ -43,22 +43,23 @@
             <button type="button" (click)="cancel()" class="btn btn-warning">Cancel</button>
             </fieldset>
         </form>
+       </div>
     </div>
-</div>
 
     <md-card style="width: 350px;">
-      <img src="{{image.value}}" height="150" width="150" class="md-card-image">
-      <md-card-content>
-      <br/>
-        <h2 align="center">{{name.value}}</h2>
-        <p align="center">{{stock.value}}<br/><strong>₹{{price.value}}</strong></p>
-      </md-card-content>
-      <br/>
-      <div class="md-actions">  
-         <button class="buy" >Buy Now</button>
-         <button class="carts">Add to cart</button>        
-      </div>  
+       <img src="{{image.value}}" height="150" width="150" class="md-card-image">
+        <md-card-content>
+          <br/>
+          <h2 align="center">{{name.value}}</h2>
+          <p align="center">{{stock.value}}<br/><strong>₹{{price.value}}</strong></p>
+        </md-card-content>
+        <br/>
+        <div class="md-actions">  
+          <button class="buy" >Buy Now</button>
+           <button class="carts">Add to cart</button>        
+        </div>  
     </md-card>
-<footer-bottom></footer-bottom>
-</div>
+
+   <footer-bottom></footer-bottom>
+  </div>
 </app-root>

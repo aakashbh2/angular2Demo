@@ -13,45 +13,52 @@ import { ShowComponentService} from '../shared/show.component.service';
 })
 
 export class ContentComponent implements OnInit{
-mobileList;
-selectedMobile :any;
-helloName;
-isActive:boolean;
-windowsList;
-iosList;
-androidList;
-filteredMobileList;
+  mobileList = [];
+  selectedMobile :any;
+  helloName;
+  isActive:boolean;
+  windowsList = [];
+  iosList = [];
+  androidList = [];
+  filteredMobileList = [];
+  i:number;
 
 constructor(private showComponentService : ShowComponentService,private mobileListService : MobileListService,private toastr: ToastrService,private router: Router){
-   this.helloName = 'Other Mobile';
+//   this.helloName = 'Other Mobile';
 }
 
 getMobileList(){
-    this.mobileList = this.mobileListService.getMobiles();
+  this.mobileList = this.mobileListService.getMobiles();
+  if(this.filteredMobileList.length == 0){
+    this.i=1;
+    this.filteredMobileList = [...this.mobileList, ...this.filteredMobileList]
+  }
 }
 
 ngOnInit(): void {
-    this.getMobileList();
-    this.isActive = this.showComponentService.isActive();
+  this.getMobileList();
+  this.isActive = this.showComponentService.isActive();
 }	
 
 handleThumbnailClick(eventName){
-		this.toastr.success("Added To Cart",eventName);
+	this.toastr.success("Added To Cart",eventName);
 }
 
 gotoDetail(mobile) {
   this.selectedMobile = mobile;
   this.router.navigate(['mobiles', this.selectedMobile.id]);
-  }
+ }
 
   rating(event,sortValue){
     if(event.target.checked){
+
       if(sortValue === 'rating'){
-        this.mobileList.sort(function (a, b) {
+        this.filteredMobileList.sort(function (a, b) {
         return a.rating - b.rating;
         });
+
       }else if(sortValue === 'name'){
-        this.mobileList.sort(function(a, b) {
+        this.filteredMobileList.sort(function(a, b) {
         var nameA = a.name.toUpperCase();
         var nameB = b.name.toUpperCase();
           if (nameA < nameB) {
@@ -68,54 +75,40 @@ gotoDetail(mobile) {
 
 mon(e,value){
   if(e.target.checked){ 
-      if(value === 'Windows'){
-       if(this.windowsList == null){
-           this.windowsList =this.mobileList.filter(function(mobile){
-           return (mobile.os === 'Windows' );
-         });
+    if (this.i == 1){
+      this.i = 2;
+      this.filteredMobileList =[];
+    }
+    if(value === 'Windows'){
+      if(this.windowsList.length == 0){
+        this.windowsList =this.mobileList.filter(function(mobile){
+        return (mobile.os === 'Windows' );
+        });
       }
-
-       if(this.filteredMobileList != null) {
-          this.filteredMobileList.push(this.windowsList);
-     }else{
-          this.filteredMobileList = this.windowsList;
-     }
+     this.filteredMobileList = [...this.windowsList, ...this.filteredMobileList]
     }
 
     if(value === 'IOS'){
-        if(this.iosList == null){
-           this.iosList =this.mobileList.filter(function(mobile){
-           return (mobile.os === 'IOS' );
-         });
+      if(this.iosList.length == 0){
+        this.iosList =this.mobileList.filter(function(mobile){
+        return (mobile.os === 'IOS' );
+        });
       }
-
-       if(this.filteredMobileList != null) {
-          this.filteredMobileList.push(this.iosList);
-     }else{
-          this.filteredMobileList = this.iosList;
-     }
+     this.filteredMobileList = [...this.iosList, ...this.filteredMobileList]
     }
 
     if(value === 'Android'){
-        if(this.androidList == null){
-           this.androidList = this.mobileList.filter(function(mobile){
-           return (mobile.os === 'Android' );
-         });
+      if(this.androidList.length == 0){
+        this.androidList =this.mobileList.filter(function(mobile){
+        return (mobile.os === 'Android' );
+        });
       }
-       if(this.filteredMobileList != null){
-          this.filteredMobileList.push(this.androidList);
-     }else{
-          this.filteredMobileList= this.filteredMobileList.pop(this.androidList);
-          //this.filteredMobileList = this.filteredMobileList.merge(this.iosList);
+     this.filteredMobileList = [...this.androidList, ...this.filteredMobileList]
      }
     }
-
-    this.mobileList=null;
-    this.mobileList = this.filteredMobileList;
-    console.log(this.mobileList + " mon " + this.filteredMobileList)
-
-    }else{
-
+    else{
+      this.filteredMobileList = [];
+      this.getMobileList();
     }
   }
 }

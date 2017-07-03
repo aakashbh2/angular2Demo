@@ -14,4 +14,4 @@ https://rukminim1.flixcart.com/image/832/832/j1dvte80/mobile/p/a/t/apple-iphone-
 
 https://prezi.com/6gl3nq4019e9/?utm_campaign=share
 
-https://angular2-demo-32a29.firebaseapp.com
+https://angular2-demo-32a29.firebaseapp.com/mobiles

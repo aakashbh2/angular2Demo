@@ -65,7 +65,7 @@ const MOBILE_LIST = [
   },
   {
     "id": 5,
-    "name": "Mi 4 (White, 16 GB)",
+    "name": "Mi 4 (White, 16 GB) (2 GB RAM)",
     "rating": "4.0",
     "brand": "Mi",
     "price": "₹18,028",
@@ -172,7 +172,7 @@ const MOBILE_LIST = [
   },
   {
     "id": 14,
-    "name": "Samsung Galaxy On Nxt (Gold, 64 GB)  (3 GB RAM)",
+    "name": "Samsung Galaxy On Nxt (Gold, 64 GB)",
     "rating": "4.1",
     "brand": "Samsung",
     "price": "₹15,900",
@@ -184,7 +184,7 @@ const MOBILE_LIST = [
   },
   {
     "id": 15,
-    "name": "Samsung Galaxy J3 Pro (Gold, 16 GB)  (2 GB RAM)",
+    "name": "Samsung Galaxy J3 Pro (Gold, 16 GB)",
     "rating": "4.1",
     "brand": "Samsung",
     "price": "₹7,990",
@@ -195,7 +195,7 @@ const MOBILE_LIST = [
   },
   {
     "id": 16,
-    "name": "Samsung Galaxy S7 Edge (Silver Titanium, 32 GB)",
+    "name": "Samsung Galaxy S7 Edge ",
     "rating": "4.4",
     "brand": "Samsung",
     "price": "₹50,900",

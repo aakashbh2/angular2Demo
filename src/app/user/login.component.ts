@@ -7,6 +7,11 @@ import { AuthService } from './auth.service'
 })
 
 export class LoginComponent{
+
+username;
+password;
+mouseoverLogin;
+
 constructor(private router:Router,private authservice: AuthService) {
 }
 

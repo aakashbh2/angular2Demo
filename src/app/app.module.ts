@@ -9,7 +9,6 @@ import { MobileDetailComponent } from './details/mobile-details.component';
 import { ContentComponent } from './content/content.component';
 import { Error404Component } from './error/404.component';
 import { AddNewComponent } from './addNewProduct/addNew.component';
-import { FilterComponent } from './content/filter.component';
 import { IoComponent } from './iopage.component';
 
 import { RouterModule } from '@angular/router';
@@ -31,7 +30,6 @@ import { routes } from './app-routing'
     ContentComponent,
     Error404Component,
     AddNewComponent,
-    FilterComponent,
     IoComponent,
   ],
   imports: [

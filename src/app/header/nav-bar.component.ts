@@ -8,13 +8,18 @@ import { AuthService } from '../user/auth.service';
 })
 
 export class NavBarComponent implements OnInit{
-auth:boolean;
-person:any;
+	auth:boolean;
+	person:any;
 
 constructor(private authservice: AuthService){
 }
-	ngOnInit(): void {
-		this.auth=this.authservice.isAuthenticated();
-		this.person=this.authservice.isAuthenticated();
-	}	
+ngOnInit(): void {
+	this.auth=this.authservice.isAuthenticated();
+	this.person=this.authservice.isAuthenticated();
+}	
+
+
+searchItem(value){
+	console.log("U searched for " + value);
+	}
 }
