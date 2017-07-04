@@ -9,7 +9,7 @@ export class AddNewProduct {
     public stock: string,
     public camera: string,
     public imageUrl: string,
-	public desc: string
-    ){
+    public desc: string
+    ) {
   }
 }

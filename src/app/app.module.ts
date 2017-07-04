@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule }   from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './header/nav-bar.component';
@@ -43,12 +43,12 @@ import { ConfirmComponent } from './content/confirm.component';
      BootstrapModalModule,
      RouterModule.forRoot(routes),
   ],
-  providers: [MobileListService,ToastrService,AuthService,ShowComponentService],
+  providers: [MobileListService, ToastrService, AuthService, ShowComponentService],
   entryComponents: [
     ConfirmComponent
   ],
   bootstrap: [AppComponent]
 })
 
-export class AppModule { 
+export class AppModule {
 }

@@ -9,7 +9,7 @@
      <input type="checkbox" (change)="mon($event,'Windows')"> Windows<br>
      <input type="checkbox" (change)="mon($event,'IOS')"> IOS<br>
      <input type="checkbox" (change)="mon($event,'Android')"> Android<br>
-    
+
      <br><br><em>
      Sort By:</em><br>
      <input type="radio" name="sort" (change)="rating($event,'rating')"> Rating
@@ -29,7 +29,7 @@
           <div [hidden] = "mobiles.stock" >
             <p align="center" (click)=gotoDetail(mobiles)>Out of stock<br/>Rating <strong>{{mobiles.rating}}*</strong></p>
           </div>
-         
+
 <!--
           <div>
             <io-page name="This"></io-page>
@@ -39,14 +39,14 @@
 
         </md-card-content>
       <br/>
-      <div class="md-actions">  
+      <div class="md-actions">
          <div [ngSwitch] = "mobiles.stock">
             <span *ngSwitchCase = "'In Stock'">
               <button class="buy" class="btn btn-default btn-block" (click)=showConfirm() >Buy Now</button>
-              
+
               <div class="col-sm-4" *ngIf="confirmResult != null">
                  <span>Result: </span>
-                 <b [ngClass]="{'text-danger': !confirmResult, 'text-success': confirmResult}">{{confirmResult ? 'Accepted': 'Declined'}}</b>
+                 <b >{{confirmResult ? 'Accepted': 'Declined'}}</b>
               </div>
 
               <button class="carts" (click) = "handleThumbnailClick(mobiles.name)">Add to cart</button>
@@ -55,7 +55,7 @@
               <button class="buy" disabled>Buy Now</button>
               <button class="carts" (click) = "handleThumbnailClick(mobiles.name)">Add to cart</button>
             </span>
-          </div>       
+          </div>
       </div>
     </md-card>
   </div>

@@ -6,17 +6,17 @@ import { AuthService } from './auth.service'
   templateUrl: './login.html',
 })
 
-export class LoginComponent{
+export class LoginComponent {
 
 username;
 password;
 mouseoverLogin;
 
-constructor(private router:Router,private authservice: AuthService) {
+constructor(private router: Router, private authservice: AuthService) {
 }
 
 login(formValues) {
-  this.authservice.loginUser('aakash','aakash');
+  this.authservice.loginUser('aakash', 'aakash');
   this.router.navigate(['mobiles'])
 }
 

@@ -5,7 +5,6 @@ import { Component, Input } from '@angular/core';
   template: `<p>Hello, {{name}}!</p>`
 })
 
-export class IoComponent{
-	@Input() name: string;
+export class IoComponent {
+    @Input() name: string;
 }
- 

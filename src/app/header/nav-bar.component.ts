@@ -7,19 +7,20 @@ import { AuthService } from '../user/auth.service';
   styleUrls: ['./nav-bar.component.css']
 })
 
-export class NavBarComponent implements OnInit{
-	auth:boolean;
-	person:any;
+export class NavBarComponent implements OnInit {
+    auth: boolean;
+    person: any;
 
-constructor(private authservice: AuthService){
+constructor(private authservice: AuthService) {
 }
+
 ngOnInit(): void {
-	this.auth=this.authservice.isAuthenticated();
-	this.person=this.authservice.isAuthenticated();
-}	
+    this.auth = this.authservice.isAuthenticated();
+    this.person = this.authservice.isAuthenticated();
+}
 
 
-searchItem(value){
-	console.log("U searched for " + value);
-	}
+searchItem(value) {
+    console.log('U searched for ' + value);
+    }
 }

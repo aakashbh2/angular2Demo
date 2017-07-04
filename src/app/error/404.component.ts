@@ -7,15 +7,15 @@ import { Component } from '@angular/core'
     <footer-bottom></footer-bottom>
   `,
   styles: [`
-    .errorMessage { 
-    margin-top:150px; 
+    .errorMessage {
+    margin-top:150px;
     font-size: 170px;
-    text-align: center; 
+    text-align: center;
     margin-bottom : 150px;
    }`]
 })
 
-export class Error404Component{
+export class Error404Component {
   constructor() {
   }
 }

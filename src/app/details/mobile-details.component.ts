@@ -3,26 +3,26 @@ import { MobileListService } from '../shared/mobile.service';
 
 import { AppComponent } from '../app.component';
 import { ActivatedRoute, Params } from '@angular/router';
-import { Location }               from '@angular/common';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'mobile-details',
   templateUrl: './mobile-details.html',
-  styleUrls:['./mobile-details.css']
+  styleUrls: ['./mobile-details.css']
 })
 
-export class MobileDetailComponent implements OnInit{
+export class MobileDetailComponent implements OnInit {
 mobile;
 @Input() name: string;
 
 constructor(
-	private mobileList: MobileListService,
+    private mobileList: MobileListService,
     private route: ActivatedRoute,
     private location: Location
-){}
+) {}
 
 ngOnInit() {
-	this.mobile=this.mobileList.getMobile(+this.route.snapshot.params['id']);    
+    this.mobile = this.mobileList.getMobile(+this.route.snapshot.params['id']);
 }
 
 goBack(): void {
