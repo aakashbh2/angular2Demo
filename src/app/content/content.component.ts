@@ -17,7 +17,7 @@ import { DialogService } from 'ng2-bootstrap-modal';
 
 export class ContentComponent implements OnInit {
   mobileList = [];
-  selectedMobile : any;
+  selectedMobile: any;
   helloName;
   isActive: boolean;
   windowsList = [];
@@ -27,7 +27,7 @@ export class ContentComponent implements OnInit {
   i: number;
   confirmResult: boolean = null;
 
-constructor(private dialogService: DialogService, private showComponentService : ShowComponentService, private mobileListService : MobileListService, private toastr: ToastrService, private router: Router) {
+constructor(private dialogService: DialogService, private showComponentService: ShowComponentService, private mobileListService: MobileListService, private toastr: ToastrService, private router: Router) {
 //   this.helloName = 'Other Mobile';
 }
 
@@ -40,8 +40,7 @@ getMobileList() {
 }
 
 ngOnInit(): void {
-  this.getMobileList();
-  this.isActive = this.showComponentService.isActive();
+    this.getMobileList();
 }
 
 handleThumbnailClick(eventName) {
@@ -73,8 +72,8 @@ rating(event, sortValue) {
 
       }else if (sortValue === 'name') {
         this.filteredMobileList.sort(function(a, b) {
-        var nameA = a.name.toUpperCase();
-        var nameB = b.name.toUpperCase();
+        let nameA = a.name.toUpperCase();
+        let nameB = b.name.toUpperCase();
           if (nameA < nameB) {
             return -1;
           }
@@ -89,9 +88,9 @@ rating(event, sortValue) {
 
 mon(e, value) {
   if (e.target.checked) {
-    if (this.i== 1) {
+    if (this.i == 1) {
       this.i = 2;
-      this.filteredMobileList =[];
+      this.filteredMobileList = [];
     }
     if (value === 'Windows') {
       if (this.windowsList.length == 0) {
@@ -123,6 +122,7 @@ mon(e, value) {
     else {
       this.filteredMobileList = [];
       this.getMobileList();
+     // (document.getElementById('checkbox')). = false;
     }
   }
 }

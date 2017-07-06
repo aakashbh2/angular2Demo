@@ -6,10 +6,10 @@
   <div class="filter col-lg-2">
      <br><br><em>
      OS:</em><br>
-     <input type="checkbox" (change)="mon($event,'Windows')"> Windows<br>
-     <input type="checkbox" (change)="mon($event,'IOS')"> IOS<br>
-     <input type="checkbox" (change)="mon($event,'Android')"> Android<br>
-
+     <input type="checkbox" id="checkbox" (change)="mon($event,'Windows')"> Windows<br>
+     <input type="checkbox" id="checkbox" (change)="mon($event,'IOS')"> IOS<br>
+     <input type="checkbox" id="checkbox" (change)="mon($event,'Android')"> Android<br>
+ 
      <br><br><em>
      Sort By:</em><br>
      <input type="radio" name="sort" (change)="rating($event,'rating')"> Rating
