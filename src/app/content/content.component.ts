@@ -120,9 +120,10 @@ mon(e, value) {
      }
     }
     else {
-      this.filteredMobileList = [];
-      this.getMobileList();
-     // (document.getElementById('checkbox')). = false;
+   this.filteredMobileList = this.filteredMobileList.filter(mobile => mobile.os !== value);
+   if(this.filteredMobileList.length === 0){
+     this.getMobileList();
+     }
     }
   }
 }

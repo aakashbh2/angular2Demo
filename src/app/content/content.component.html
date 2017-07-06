@@ -42,19 +42,21 @@
       <div class="md-actions">
          <div [ngSwitch] = "mobiles.stock">
             <span *ngSwitchCase = "'In Stock'">
-              <button class="buy" class="btn btn-default btn-block" (click)=showConfirm() >Buy Now</button>
-
-              <div class="col-sm-4" *ngIf="confirmResult != null">
-                 <span>Result: </span>
-                 <b >{{confirmResult ? 'Accepted': 'Declined'}}</b>
-              </div>
+              <button class="buy" class="btn btn-default" (click)=showConfirm() >Buy Now</button>
 
               <button class="carts" (click) = "handleThumbnailClick(mobiles.name)">Add to cart</button>
             </span>
+
             <span *ngSwitchDefault >
               <button class="buy" disabled>Buy Now</button>
               <button class="carts" (click) = "handleThumbnailClick(mobiles.name)">Add to cart</button>
             </span>
+            <br>
+              <div *ngIf="confirmResult != null">
+                 <span>Result: </span>
+                 <b >{{confirmResult ? 'Accepted': 'Declined'}}</b>
+              </div>
+
           </div>
       </div>
     </md-card>
