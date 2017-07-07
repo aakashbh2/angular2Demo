@@ -24,7 +24,7 @@ constructor(
 
 onSubmit(formValues): void {
   this.mobile = new AddNewProduct(formValues.value.id, formValues.value.name, formValues.value.rating, formValues.value.brand, formValues.value.price, formValues.value.os, formValues.value.stock, formValues.value.camera, formValues.value.imageUrl, formValues.value.desc);
-  this.mobileListService.setMobile(this.mobile);
+  // this.mobileListService.setMobile(this.mobile);
   this.router.navigate(['mobiles'])
 }
 

@@ -52,11 +52,13 @@ constructor(private dialogService: DialogService, private showComponentService: 
 }
 
 getMobileList() {
-  this.mobileList = this.mobileListService.getMobiles();
-  if (this.filteredMobileList.length == 0) {
-    this.i = 1;
-    this.filteredMobileList = [...this.mobileList, ...this.filteredMobileList]
-  }
+  this.mobileListService.getMobiles().subscribe(result => {
+      this.mobileList = result;
+       if (this.filteredMobileList.length == 0) {
+        this.i = 1;
+        this.filteredMobileList = [...this.mobileList, ...this.filteredMobileList]
+        }
+    });
 }
 
 ngOnInit(): void {
@@ -77,7 +79,6 @@ showConfirm() {
   title: 'Confirmation',
   message: 'Are you sure?'})
   .subscribe((isConfirmed) => {
-  // Get dialog result
   this.confirmResult = isConfirmed;
   });
  }
