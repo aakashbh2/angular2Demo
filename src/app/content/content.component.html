@@ -37,7 +37,7 @@
             <p align="center" (click)=gotoDetail(mobiles)>In Stock<br/>Rating <strong>{{mobiles.rating}}*</strong></p>
           </div>
           <div [hidden] = "mobiles.stock" >
-            <p align="center" (click)=gotoDetail(mobiles)>Out of stock<br/>Rating <strong>{{mobiles.rating}}*</strong></p>
+            <p *ngIf="show" [@myAnimation] align="center" (click)=gotoDetail(mobiles)>Out of stock<br/>Rating <strong>{{mobiles.rating}}*</strong></p>
           </div>
 
 <!--
@@ -58,7 +58,7 @@
             </span>
 
             <span *ngSwitchDefault >
-              <button class="buy" disabled>Buy Now</button>
+              <button class="buy" (click)="show = !show">Buy Now</button>
               <button class="carts" (click) = "handleThumbnailClick(mobiles.name)">Add to cart</button>
             </span>
             <br>

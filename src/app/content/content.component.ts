@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { trigger, transition, style, animate, state } from '@angular/core';
 import { MobileListService } from '../shared/mobile.service';
 import { ToastrService } from '../shared/toastr.service';
 import { AppComponent } from '../app.component';
@@ -13,6 +14,24 @@ import { DialogService } from 'ng2-bootstrap-modal';
    selector: 'content-page',
    templateUrl: './content.component.html',
    styleUrls: ['./content.component.css'],
+   animations: [
+    trigger(
+      'myAnimation',
+      [
+        transition(
+        ':enter', [
+          style({transform: 'translateX(100%)', opacity: 0}),
+          animate('500ms', style({transform: 'translateX(0)', 'opacity': 1}))
+        ]
+      ),
+      transition(
+        ':leave', [
+          style({transform: 'translateX(0)', 'opacity': 1}),
+          animate('500ms', style({transform: 'translateX(100%)', 'opacity': 0}))
+        ]
+      )]
+    )
+  ]
 })
 
 export class ContentComponent implements OnInit {
@@ -26,6 +45,7 @@ export class ContentComponent implements OnInit {
   filteredMobileList = [];
   i: number;
   confirmResult: boolean = null;
+  show:boolean = true;
 
 constructor(private dialogService: DialogService, private showComponentService: ShowComponentService, private mobileListService: MobileListService, private toastr: ToastrService, private router: Router) {
 //   this.helloName = 'Other Mobile';
