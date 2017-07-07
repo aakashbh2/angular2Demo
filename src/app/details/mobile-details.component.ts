@@ -22,7 +22,7 @@ constructor(
 ) {}
 
 ngOnInit() {
-    // this.mobile = this.mobileList.getMobile(+this.route.snapshot.params['id']);
+    this.mobile = this.mobileList.getMobile(+this.route.snapshot.params['id']);
 }
 
 goBack(): void {
